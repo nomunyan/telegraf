@@ -672,6 +672,14 @@ export declare class Telegram extends ApiClient {
   setChatTitle(chatId: number | string, title: string): Promise<boolean>
 
   /**
+   * Use this method to change the description of a group, a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights.
+   * @param chatId Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
+   * @param description New chat description, 0-255 characters
+   * @returns True on success
+   */
+  setChatDescription(chatId: number | string, description: string): Promise<boolean>
+
+  /**
    * Use this method to get the current list of the bot's commands. Requires no parameters.
    * @returns Array of BotCommand on success.
    */
